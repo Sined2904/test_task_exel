@@ -1,0 +1,12 @@
+volumes:
+  static_volume:
+
+services:
+
+  backend:
+    build: ./test_task/
+
+  gateway:
+    build: ./gateway/
+    ports:
+      - 8000:80

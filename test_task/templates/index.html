@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Отправка файла на сервер</title>
+ </head>
+  <body>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 p-5">
+          <div class="card">
+              <div class="col-md-6 offset-md-4">
+                <form enctype="multipart/form-data" method="post" action="{% url 'api:file' %}" >
+                  <p>
+                    <input type="file" name="input_data" class="form-group row my-3">
+                    <input type="submit" value="Отправить" class="btn btn-primary">
+                  </p>
+                </form> 
+              </div> 
+           </div> 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
